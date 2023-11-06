@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Oregon Tail"
-run/main_scene="res://Main/main_menu.tscn"
+config/name="Admiral Whiskers"
+run/main_scene="res://UI/Menu/main_menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 
 [autoload]

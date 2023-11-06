@@ -87,9 +87,10 @@ func update_selection() -> void:
 
 #Respond to Selection Signal
 func _on_selected(item):
-	prints("item:", item.text)
+	#TODO: Less hacky way to check this
 	if item.text == "Start Game":
 		_add_a_scene_manually()
 
 func _add_a_scene_manually():
+	get_tree().current_scene.queue_free()
 	get_tree().root.add_child(new_scene)
