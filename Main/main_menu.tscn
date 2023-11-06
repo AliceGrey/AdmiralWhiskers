@@ -11,15 +11,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Menu" type="VBoxContainer" parent="."]
+[node name="Menu" type="VBoxContainer" parent="." node_paths=PackedStringArray("pointer")]
 layout_mode = 0
 offset_left = 397.0
 offset_top = 170.0
 offset_right = 766.0
 offset_bottom = 440.0
 script = ExtResource("1_xaqad")
-pointer = Object(Sprite2D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"clip_children":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"position":Vector2(373, 182),"rotation":0.0,"scale":Vector2(0.04, 0.04),"skew":0.0,"texture":ExtResource("2_y0hul"),"centered":true,"offset":Vector2(0, 0),"flip_h":false,"flip_v":false,"hframes":1,"vframes":1,"frame":0,"region_enabled":false,"region_rect":Rect2(0, 0, 0, 0),"region_filter_clip_enabled":false,"script":null)
-
+pointer = NodePath("")
 
 [node name="Label" type="Label" parent="Menu"]
 layout_mode = 2

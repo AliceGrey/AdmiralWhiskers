@@ -4,7 +4,7 @@ signal selected(item: Control)
 
 @export var pointer: Node
 
-var new_scene = preload("red://levels")
+var new_scene = preload("res://Levels/level1.tscn").instantiate()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#connect to viewports focus signal
@@ -88,6 +88,8 @@ func update_selection() -> void:
 #Respond to Selection Signal
 func _on_selected(item):
 	prints("item:", item.text)
+	if item.text == "Start Game":
+		_add_a_scene_manually()
 
-func _add_a_scene_manually()
-	get_tree().root.add_child()
+func _add_a_scene_manually():
+	get_tree().root.add_child(new_scene)
