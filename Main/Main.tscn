@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://elchojioye1w"]
+
+[ext_resource type="PackedScene" uid="uid://l2hjsvvv8df5" path="res://Levels/level1.tscn" id="1_k3uum"]
+[ext_resource type="Script" path="res://Main/main.gd" id="1_qhdjv"]
+[ext_resource type="PackedScene" uid="uid://soklkm2q1b7q" path="res://Main/main_menu.tscn" id="3_0orf5"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_qhdjv")
+
+[node name="Game World" type="Node2D" parent="."]
+
+[node name="Level1" parent="Game World" instance=ExtResource("1_k3uum")]
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Main Menu" parent="GUI" instance=ExtResource("3_0orf5")]
+layout_mode = 1

@@ -1,0 +1,11 @@
+~ start
+
+AI: Admiral, you're awake. Thank goodness!
+AI: ...
+- Who are you?
+	AI: I'm the AI that has been flying and maintaining this starship. I need your help Admiral.
+- Where am I?
+	AI: You are currently aboard the USS Hope - a galaxy class cryo-cruiser. We are currently in the Alpha Centauri system. One year from our planned destination.  
+- What do you want?
+	AI: I've done all I can to keep this ship working. I need someone with your skills to help maintain the ship.
+=> END
