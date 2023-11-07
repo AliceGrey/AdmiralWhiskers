@@ -14,7 +14,7 @@ func verify_save_directory(path : String):
 static func load_game():
 	Globals.playerVariables = ResourceLoader.load(save_file_path + save_file_name).duplicate(true)
 	
-func save_game():
+static func save_game():
 		ResourceSaver.save(Globals.playerVariables, save_file_path + save_file_name)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
