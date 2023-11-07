@@ -1,5 +1,8 @@
 extends Node
 
+var metai: bool = false
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	new_game()
@@ -9,4 +12,4 @@ func _process(delta):
 	pass
 
 func new_game():
-	pass
+	get_tree().root.add_child(load("res://UI/Menu/main_menu.tscn").instantiate())

@@ -1,10 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://l2hjsvvv8df5"]
+[gd_scene load_steps=9 format=3 uid="uid://l2hjsvvv8df5"]
 
 [ext_resource type="PackedScene" uid="uid://cx54vgawhxneq" path="res://Player/player.tscn" id="2_ti7qq"]
 [ext_resource type="Texture2D" uid="uid://gdlob0ilufmd" path="res://Map/tileset_sf.png" id="3_6s1sq"]
-[ext_resource type="Resource" uid="uid://um5bq5tl26a8" path="res://UI/Dialogue/HelloWorld.dialogue" id="3_bcg3y"]
-[ext_resource type="PackedScene" uid="uid://yus1loxriev2" path="res://UI/Dialogue/portraits_balloon/balloon.tscn" id="3_jhjeb"]
-[ext_resource type="PackedScene" uid="uid://bn20f7mq60o72" path="res://UI/Dialogue/portraits_balloon/small_balloon.tscn" id="4_ew548"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_ehe4a"]
 tile_data = PackedInt32Array(0, 196608, 10, 65536, 196608, 11, 1, 262144, 10, 65537, 262144, 11)
@@ -307,9 +304,6 @@ layer_1/tile_data = PackedInt32Array()
 texture_filter = 1
 position = Vector2(84, 151)
 scale = Vector2(2, 2)
-Balloon = ExtResource("3_jhjeb")
-SmallBalloon = ExtResource("4_ew548")
-dialogue_resource = ExtResource("3_bcg3y")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0.5, -0.5)
