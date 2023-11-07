@@ -62,8 +62,9 @@ func configure_focus_chain() -> void:
 		else:
 			item.focus_neighbor_top = items[i - 1].get_path()
 			item.focus_previous = items[i - 1].get_path()
+			
 		#if last in list
-		if i == items.size() - 1:
+		if i == (items.size() - 1):
 			item.focus_neighbor_bottom = item.get_path()
 			#if we're the last item in the list we have no next item so we get ourselves
 			item.focus_next = item.get_path()
