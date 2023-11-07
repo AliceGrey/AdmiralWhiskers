@@ -1,8 +1,10 @@
-[gd_scene load_steps=61 format=3 uid="uid://cx54vgawhxneq"]
+[gd_scene load_steps=63 format=3 uid="uid://cx54vgawhxneq"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_hfym0"]
 [ext_resource type="Script" path="res://Player/PlayerSkin.gd" id="2_30dgn"]
+[ext_resource type="PackedScene" uid="uid://73jm5qjy52vq" path="res://UI/Dialogue/dialog_balloon/balloon.tscn" id="2_nrpyj"]
 [ext_resource type="Texture2D" uid="uid://dopi7jurkv5h3" path="res://Player/indigo_0.png" id="3_acmtx"]
+[ext_resource type="Resource" uid="uid://um5bq5tl26a8" path="res://UI/Dialogue/HelloWorld.dialogue" id="4_b6w68"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eo4so"]
 atlas = ExtResource("3_acmtx")
@@ -387,35 +389,6 @@ tracks/1/keys = {
 "values": [2, 1, 0, 1, 2, 3, 4]
 }
 
-[sub_resource type="Animation" id="Animation_lxnlb"]
-resource_name = "MoveDown"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PlayerSkin/PlayerSprite:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"MoveDown"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("PlayerSkin/PlayerSprite:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-
 [sub_resource type="Animation" id="Animation_d315y"]
 resource_name = "IdleUp"
 length = 10.0
@@ -445,8 +418,8 @@ tracks/1/keys = {
 "values": [2, 1, 0, 1, 2, 3, 4]
 }
 
-[sub_resource type="Animation" id="Animation_hj8cc"]
-resource_name = "MoveUp"
+[sub_resource type="Animation" id="Animation_lxnlb"]
+resource_name = "MoveDown"
 length = 0.4
 loop_mode = 1
 tracks/0/type = "value"
@@ -459,7 +432,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"MoveUp"]
+"values": [&"MoveDown"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -518,6 +491,35 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"MoveRight"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerSkin/PlayerSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_hj8cc"]
+resource_name = "MoveUp"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerSkin/PlayerSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"MoveUp"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -601,6 +603,8 @@ z_index = 1
 y_sort_enabled = true
 collision_mask = 2
 script = ExtResource("1_hfym0")
+Dialog_Balloon = ExtResource("2_nrpyj")
+dialogue_resource = ExtResource("4_b6w68")
 
 [node name="YCollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(4, 4, 5, -1, 5, -4, 5, -8, 1, -10, -3, -9, -6, -8, -6, -4, -6, -1, -5, 4, -4, 9, 3, 9, 4, 6)

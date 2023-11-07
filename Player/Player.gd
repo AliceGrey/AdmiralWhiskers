@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
-@export var Balloon: PackedScene
-@export var SmallBalloon: PackedScene
+@export var Dialog_Balloon: PackedScene
 @export var title: String = "start"
 @export var dialogue_resource: DialogueResource
 
@@ -27,7 +26,7 @@ func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		assert(dialogue_resource != null, "\"dialogue_resource\" property needs to point to a DialogueResource.")
 		var is_small_window: bool = ProjectSettings.get_setting("display/window/size/viewport_width") < 400
-		var balloon: Node = (SmallBalloon if is_small_window else Balloon).instantiate()
+		var balloon: Node = Dialog_Balloon.instantiate()
 		add_child(balloon)
 		balloon.start(dialogue_resource, title)
 		return

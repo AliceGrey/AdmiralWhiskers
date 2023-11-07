@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkss8dksmpnym"
-path="res://.godot/imported/shodan.jpg-29ca09aee392839bd32d0c7c838d0287.ctex"
+uid="uid://cvb6aa6fvbtsb"
+path="res://.godot/imported/ai.jpg-7bf956285e6d5f4e7d35db123309ff8f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Dialogue/portraits_balloon/portraits/shodan.jpg"
-dest_files=["res://.godot/imported/shodan.jpg-29ca09aee392839bd32d0c7c838d0287.ctex"]
+source_file="res://UI/Dialogue/dialog_balloon/portraits/ai.jpg"
+dest_files=["res://.godot/imported/ai.jpg-7bf956285e6d5f4e7d35db123309ff8f.ctex"]
 
 [params]
 
