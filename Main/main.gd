@@ -1,15 +1,3 @@
-extends Node
+class_name Main extends Node
 
 var metai: bool = false
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	new_game()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-func new_game():
-	get_tree().root.add_child(load("res://UI/Menu/main_menu.tscn").instantiate())

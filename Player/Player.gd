@@ -22,7 +22,7 @@ func _ready() -> void:
 	
 
 func _unhandled_input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("ui_accept") and not get_node("/root/Main").metai:
 		assert(dialogue_resource != null, "\"dialogue_resource\" property needs to point to a DialogueResource.")
 		
 		input_direction = Vector2.ZERO

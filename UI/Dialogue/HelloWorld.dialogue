@@ -11,6 +11,6 @@ AI: ...
 - Why me?
 	AI: Because you're The Admiral! My training data stipulates that admirals outrank captains. So you're the best fit to help me repair the ship!
 - Bye
-	set  Main.metai = true
+	set Main.metai = true
 	=> END!
 =>< loop
