@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://elchojioye1w"]
 
-[ext_resource type="Script" path="res://Main/main.gd" id="1_qhdjv"]
+[ext_resource type="Script" path="res://Main/Main.gd" id="1_3wjmr"]
 [ext_resource type="PackedScene" uid="uid://soklkm2q1b7q" path="res://UI/Menu/main_menu.tscn" id="3_0orf5"]
 
 [node name="Main" type="Node"]
-script = ExtResource("1_qhdjv")
+script = ExtResource("1_3wjmr")
 
 [node name="Game World" type="Node2D" parent="."]
 

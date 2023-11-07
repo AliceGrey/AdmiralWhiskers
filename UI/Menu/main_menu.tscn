@@ -22,7 +22,7 @@ pointer = NodePath("../MenuArrow")
 
 [node name="Label" type="Label" parent="Menu"]
 layout_mode = 2
-text = "Start Game"
+text = "Start New Game"
 
 [node name="Label2" type="Label" parent="Menu"]
 layout_mode = 2

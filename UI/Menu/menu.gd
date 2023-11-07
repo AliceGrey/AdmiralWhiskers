@@ -88,8 +88,12 @@ func update_selection() -> void:
 #Respond to Selection Signal
 func _on_selected(item):
 	#TODO: Less hacky way to check this
-	if item.text == "Start Game":
+	if item.text == "Start New Game":
 		_add_a_scene_manually()
+	if item.text == "Load Game":
+		Main.load_game()
+		_add_a_scene_manually()
+	
 
 func _add_a_scene_manually():
 	get_node("/root/Main/GUI/Main Menu").queue_free()

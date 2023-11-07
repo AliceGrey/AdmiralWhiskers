@@ -1,7 +1,7 @@
 ~ start
 AI: Admiral, you're awake. Thank goodness!
 ~ loop
-AI: ...
+AI: Awaiting Input...
 - Who are you?
 	AI: I'm the AI that has been flying and maintaining this starship. I need your help Admiral. 
 - Where am I?
@@ -11,6 +11,7 @@ AI: ...
 - Why me?
 	AI: Because you're The Admiral! My training data stipulates that admirals outrank captains. So you're the best fit to help me repair the ship!
 - Bye
-	set Main.metai = true
+	set Globals.playerVariables.met_ai = true
+	do Main.save_game()
 	=> END!
 =>< loop

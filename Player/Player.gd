@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 @export var Dialog_Balloon: PackedScene = load("res://UI/Dialogue/dialog_balloon/balloon.tscn")
 @export var title: String = "start"
@@ -22,7 +23,7 @@ func _ready() -> void:
 	
 
 func _unhandled_input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_accept") and not get_node("/root/Main").metai:
+	if Input.is_action_just_pressed("ui_accept") and not Globals.playerVariables.met_ai:
 		assert(dialogue_resource != null, "\"dialogue_resource\" property needs to point to a DialogueResource.")
 		
 		input_direction = Vector2.ZERO
@@ -31,7 +32,6 @@ func _unhandled_input(_event: InputEvent) -> void:
 		add_child(balloon)
 		balloon.start(dialogue_resource, title)
 		return
-		
 	input_direction = Vector2(
 		Input.get_axis("move_left", "move_right"),
 		Input.get_axis("move_up", "move_down")
