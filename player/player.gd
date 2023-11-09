@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Player
 
-@export var Dialog_Balloon: PackedScene = load("res://ui/dialogue/dialog_balloon/balloon.tscn")
+@export var Dialog_Balloon: PackedScene = load("res://ui/dialogue_balloon/balloon.tscn")
 @export var title: String = "start"
 @export var dialogue_resource: DialogueResource
 
@@ -19,7 +19,6 @@ var input_direction := Vector2.ZERO
 
 
 func _ready() -> void:
-	self.set_global_position(Globals.playerVariables.global_position)
 	skin.play_animation("Idle")
 	
 
@@ -33,9 +32,6 @@ func _unhandled_input(_event: InputEvent) -> void:
 		add_child(balloon)
 		balloon.start(dialogue_resource, title)
 		return
-	if Input.is_action_just_pressed("save_now"):
-		Globals.playerVariables.global_position = self.global_position
-		Main.save_game()
 	input_direction = Vector2(
 		Input.get_axis("move_left", "move_right"),
 		Input.get_axis("move_up", "move_down")

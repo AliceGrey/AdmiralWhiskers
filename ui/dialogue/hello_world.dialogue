@@ -12,6 +12,6 @@ AI: Awaiting Input...
 	AI: Because you're The Admiral! My training data stipulates that admirals outrank captains. So you're the best fit to help me repair the ship!
 - Bye
 	set Globals.playerVariables.met_ai = true
-	do Main.save_game()
+	do emit("save_game_signal")
 	=> END!
 =>< loop

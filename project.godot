@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Admiral Whiskers"
-run/main_scene="res://main/main.tscn"
+run/main_scene="res://game_manager/game_manager.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-Globals="*res://main/globals.gd"
+Globals="*res://game_manager/globals.gd"
 
 [dialogue_manager]
 
