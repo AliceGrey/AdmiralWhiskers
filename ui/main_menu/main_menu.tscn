@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://soklkm2q1b7q"]
+
+[ext_resource type="Script" path="res://ui/main_menu/menu.gd" id="1_32noj"]
+[ext_resource type="Texture2D" uid="uid://b7kwwrcgnqnew" path="res://art/icons/menu_arrow.png" id="2_lbykf"]
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menu" type="VBoxContainer" parent="." node_paths=PackedStringArray("pointer")]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 170.0
+offset_right = 766.0
+offset_bottom = 440.0
+script = ExtResource("1_32noj")
+pointer = NodePath("../MenuArrow")
+
+[node name="StartGame" type="Label" parent="Menu"]
+layout_mode = 2
+text = "Start New Game"
+
+[node name="LoadGame" type="Label" parent="Menu"]
+layout_mode = 2
+text = "Load Game"
+
+[node name="Settings" type="Label" parent="Menu"]
+layout_mode = 2
+text = "Settings
+"
+
+[node name="Exit" type="Label" parent="Menu"]
+layout_mode = 2
+text = "Exit"
+
+[node name="MenuArrow" type="Sprite2D" parent="."]
+position = Vector2(373, 182)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_lbykf")
+
+[connection signal="selected" from="Menu" to="Menu" method="_on_selected"]
