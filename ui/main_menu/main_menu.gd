@@ -1,4 +1,5 @@
 extends Control
+class_name MainMenu
 
 signal new_game()
 signal load_game()

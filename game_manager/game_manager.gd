@@ -16,29 +16,10 @@ signal save_game_signal()
 var player: Player
 var world: World
 
-var game_paused : bool = false:
-	get:
-		return game_paused
-	set(value):
-		game_paused = value
-		get_tree().paused = value
-		#Call Down Signal Up
-		get_node("UI/Control/PauseMenu").on_game_paused(game_paused)
-
-func _toggle_game_paused():
-	game_paused = !game_paused
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_verify_save_directory(save_file_path)
 	connect("save_game_signal",save_game)
-
-func _input(event : InputEvent):
-	if event.is_action_pressed("ui_cancel"):
-		_toggle_game_paused()
-
-	if event.is_action_pressed("save_now"):
-		save_game()
 
 func new_game():
 	#Init World
@@ -54,6 +35,7 @@ func new_game():
 	#Init Cam
 	camera.position = player.position
 	camera.anchor_mode = Camera2D.ANCHOR_MODE_DRAG_CENTER
+	get_tree().paused = false
 
 func load_game():
 	Globals.playerVariables = ResourceLoader.load(save_file_path + save_file_name).duplicate(true)
@@ -67,6 +49,7 @@ func load_game():
 	
 	camera.position = player.position
 	camera.anchor_mode = Camera2D.ANCHOR_MODE_DRAG_CENTER
+	get_tree().paused = false
 
 func start_game():
 	#TODO: Add common code between load_game and new_game here
@@ -79,14 +62,26 @@ func save_game():
 	Globals.playerVariables.global_position = player.position
 	ResourceSaver.save(Globals.playerVariables, save_file_path + save_file_name)
 
+
+#SIGNALS#
+
 func _on_ui_new_game():
 	new_game()
 
 func _on_ui_save_game():
 	save_game()
- 
-func _on_ui_toggle_game_paused():
-	_toggle_game_paused()
 
 func _on_ui_load_game():
 	load_game()
+
+func _on_ui_quit_to_menu():
+	if world:
+		world.queue_free()
+		world = null
+		player = null
+
+func _on_ui_pause_menu_closed():
+	get_tree().paused = false
+
+func _on_ui_pause_menu_opened():
+	get_tree().paused = true

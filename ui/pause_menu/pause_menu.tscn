@@ -54,6 +54,10 @@ text = "Load"
 layout_mode = 2
 text = "Save"
 
+[node name="MenuButton" type="Button" parent="Panel/VBoxContainer/ButtonVbox"]
+layout_mode = 2
+text = "Quit To Menu"
+
 [node name="ExitButton" type="Button" parent="Panel/VBoxContainer/ButtonVbox"]
 layout_mode = 2
 text = "Exit"
@@ -61,4 +65,6 @@ text = "Exit"
 [connection signal="pressed" from="Panel/VBoxContainer/ButtonVbox/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/ButtonVbox/LoadButton" to="." method="_on_load_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/ButtonVbox/SaveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/ButtonVbox/MenuButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/ButtonVbox/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/ButtonVbox/ExitButton" to="." method="_on_exit_button_pressed"]

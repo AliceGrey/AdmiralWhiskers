@@ -14,12 +14,15 @@ WorldScene = ExtResource("3_0svwp")
 
 [node name="UI" parent="." instance=ExtResource("4_x4qbu")]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("5_h6k8m")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-
 [connection signal="load_game" from="UI" to="." method="_on_ui_load_game"]
 [connection signal="new_game" from="UI" to="." method="_on_ui_new_game"]
+[connection signal="pause_menu_closed" from="UI" to="." method="_on_ui_pause_menu_closed"]
+[connection signal="pause_menu_opened" from="UI" to="." method="_on_ui_pause_menu_opened"]
+[connection signal="quit_to_menu" from="UI" to="." method="_on_ui_quit_to_menu"]
 [connection signal="save_game" from="UI" to="." method="_on_ui_save_game"]
-[connection signal="toggle_game_paused" from="UI" to="." method="_on_ui_toggle_game_paused"]
