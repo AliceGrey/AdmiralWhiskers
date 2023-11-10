@@ -599,9 +599,7 @@ states/Move/node = SubResource("AnimationNodeBlendSpace2D_lavqq")
 states/Move/position = Vector2(610, 100)
 
 [node name="Player" type="CharacterBody2D"]
-z_index = 1
-y_sort_enabled = true
-collision_mask = 2
+collision_mask = 6
 script = ExtResource("1_sg6li")
 Dialog_Balloon = ExtResource("2_kc7nn")
 dialogue_resource = ExtResource("3_b5n8u")
@@ -617,7 +615,7 @@ script = ExtResource("4_0hgnj")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="PlayerSkin"]
 sprite_frames = SubResource("SpriteFrames_ma1g0")
-animation = &"MoveDown"
+animation = &"IdleDown"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerSkin"]
 root_node = NodePath("../..")
@@ -633,3 +631,5 @@ active = true
 process_callback = 0
 parameters/Idle/blend_position = Vector2(0.00057435, 0.0986965)
 parameters/Move/blend_position = Vector2(0, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]

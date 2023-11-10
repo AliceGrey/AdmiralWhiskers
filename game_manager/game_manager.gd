@@ -8,7 +8,6 @@ static var save_file_name = "save.tres"
 @export var WorldScene: PackedScene
 
 @export var ui: UI
-@onready var camera: Camera = $Camera2D
 
 signal toggle_game_paused()
 signal save_game_signal()
@@ -32,9 +31,6 @@ func new_game():
 	world.add_child(player)
 	player.position = Vector2(0,0)
 	
-	#Init Cam
-	camera.position = player.position
-	camera.anchor_mode = Camera2D.ANCHOR_MODE_DRAG_CENTER
 	get_tree().paused = false
 
 func load_game():
@@ -47,8 +43,6 @@ func load_game():
 	world.add_child(player)
 	player.position = Globals.playerVariables.global_position
 	
-	camera.position = player.position
-	camera.anchor_mode = Camera2D.ANCHOR_MODE_DRAG_CENTER
 	get_tree().paused = false
 
 func start_game():
