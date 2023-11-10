@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://elchojioye1w"]
+[gd_scene load_steps=6 format=3 uid="uid://elchojioye1w"]
 
 [ext_resource type="Script" path="res://game_manager/game_manager.gd" id="1_ox815"]
 [ext_resource type="PackedScene" uid="uid://k1vdft31yg6c" path="res://world/world.tscn" id="3_0svwp"]
 [ext_resource type="PackedScene" uid="uid://cx54vgawhxneq" path="res://player/player.tscn" id="3_cbwhp"]
 [ext_resource type="PackedScene" uid="uid://cabevbdy85a88" path="res://ui/ui.tscn" id="4_x4qbu"]
+[ext_resource type="AudioStream" uid="uid://cvhhkb2sjk44c" path="res://audio/music/ambience.wav" id="5_kbmoe"]
 
 [node name="GameManager" type="Node" node_paths=PackedStringArray("ui")]
 process_mode = 3
@@ -16,6 +17,10 @@ ui = NodePath("UI")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 process_mode = 3
+stream = ExtResource("5_kbmoe")
+volume_db = -20.0
+autoplay = true
+bus = &"Music"
 
 [connection signal="load_game" from="UI" to="." method="_on_ui_load_game"]
 [connection signal="new_game" from="UI" to="." method="_on_ui_new_game"]
