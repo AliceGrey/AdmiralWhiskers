@@ -5,11 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://cx54vgawhxneq" path="res://player/player.tscn" id="3_cbwhp"]
 [ext_resource type="PackedScene" uid="uid://cabevbdy85a88" path="res://ui/ui.tscn" id="4_x4qbu"]
 
-[node name="GameManager" type="Node"]
+[node name="GameManager" type="Node" node_paths=PackedStringArray("ui")]
 process_mode = 3
 script = ExtResource("1_ox815")
 PlayerScene = ExtResource("3_cbwhp")
 WorldScene = ExtResource("3_0svwp")
+ui = NodePath("UI")
 
 [node name="UI" parent="." instance=ExtResource("4_x4qbu")]
 
