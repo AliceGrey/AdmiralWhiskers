@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwhfqpybkav28"]
+
+[ext_resource type="Texture2D" uid="uid://cvb6aa6fvbtsb" path="res://ui/dialogue_balloon/portraits/ai.jpg" id="1_t8o56"]
+[ext_resource type="Script" path="res://npc/npc.gd" id="2_ajl28"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(-929, 159)
+scale = Vector2(0.552632, 0.552632)
+texture = ExtResource("1_t8o56")
+script = ExtResource("2_ajl28")

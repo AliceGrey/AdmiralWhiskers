@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://elchojioye1w"]
+[gd_scene load_steps=8 format=3 uid="uid://elchojioye1w"]
 
 [ext_resource type="Script" path="res://game_manager/game_manager.gd" id="1_ox815"]
 [ext_resource type="PackedScene" uid="uid://k1vdft31yg6c" path="res://world/world.tscn" id="3_0svwp"]
 [ext_resource type="PackedScene" uid="uid://cx54vgawhxneq" path="res://player/player.tscn" id="3_cbwhp"]
+[ext_resource type="PackedScene" uid="uid://bwhfqpybkav28" path="res://npc/npc.tscn" id="3_g5t25"]
 [ext_resource type="PackedScene" uid="uid://cabevbdy85a88" path="res://ui/ui.tscn" id="4_x4qbu"]
 [ext_resource type="AudioStream" uid="uid://cvhhkb2sjk44c" path="res://audio/music/ambience.wav" id="5_kbmoe"]
 [ext_resource type="Script" path="res://game_manager/camera.gd" id="6_bjhyq"]
@@ -11,6 +12,7 @@
 process_mode = 3
 script = ExtResource("1_ox815")
 PlayerScene = ExtResource("3_cbwhp")
+NPC_Scene = ExtResource("3_g5t25")
 WorldScene = ExtResource("3_0svwp")
 ui = NodePath("UI")
 
