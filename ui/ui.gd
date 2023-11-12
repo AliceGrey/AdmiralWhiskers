@@ -19,6 +19,8 @@ func _input(event : InputEvent):
 		pause_menu.visible = !pause_menu.visible
 		if pause_menu.visible:
 			pause_menu_opened.emit()
+		else:
+			pause_menu_closed.emit()
 
 func _on_main_menu_new_game() -> void:
 	new_game.emit()

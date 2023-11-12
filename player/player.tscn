@@ -631,5 +631,3 @@ active = true
 process_callback = 0
 parameters/Idle/blend_position = Vector2(0.00057435, 0.0986965)
 parameters/Move/blend_position = Vector2(0, 0)
-
-[node name="Camera2D" type="Camera2D" parent="."]

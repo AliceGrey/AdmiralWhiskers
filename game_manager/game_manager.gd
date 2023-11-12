@@ -9,6 +9,8 @@ static var save_file_name = "save.tres"
 
 @export var ui: UI
 
+@onready var camera: Camera = $Camera2D
+
 signal toggle_game_paused()
 signal save_game_signal()
 
@@ -31,6 +33,9 @@ func new_game():
 	world.add_child(player)
 	player.position = Vector2(0,0)
 	
+	#Init Camera
+	camera.change_target(player)
+	await get_tree().create_timer(2).timeout
 	get_tree().paused = false
 
 func load_game():
@@ -56,9 +61,7 @@ func save_game():
 	Globals.playerVariables.global_position = player.position
 	ResourceSaver.save(Globals.playerVariables, save_file_path + save_file_name)
 
-
 #SIGNALS#
-
 func _on_ui_new_game():
 	new_game()
 

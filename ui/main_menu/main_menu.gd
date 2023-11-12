@@ -20,3 +20,6 @@ func _on_settings_button_pressed():
 func _on_exit_button_pressed():
 	#TODO: Add "are you sure you want to quit" popup
 	get_tree().quit()
+
+func _on_visibility_changed():
+	pass # Replace with function body.
