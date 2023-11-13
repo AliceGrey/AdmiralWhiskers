@@ -1,10 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwhfqpybkav28"]
+[gd_scene load_steps=7 format=3 uid="uid://bwhfqpybkav28"]
 
 [ext_resource type="Texture2D" uid="uid://cvb6aa6fvbtsb" path="res://ui/dialogue_balloon/portraits/ai.jpg" id="1_t8o56"]
 [ext_resource type="Script" path="res://npc/npc.gd" id="2_ajl28"]
+[ext_resource type="PackedScene" uid="uid://cudsy48ym0tvy" path="res://helpers/interactable.tscn" id="3_dpp2y"]
+[ext_resource type="PackedScene" uid="uid://73jm5qjy52vq" path="res://ui/dialogue_balloon/balloon.tscn" id="4_xjidl"]
+[ext_resource type="Resource" uid="uid://um5bq5tl26a8" path="res://ui/dialogue/hello_world.dialogue" id="5_84dnq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0526a"]
+size = Vector2(77.8098, 108.571)
 
 [node name="Sprite2D" type="Sprite2D"]
 position = Vector2(-929, 159)
 scale = Vector2(0.552632, 0.552632)
 texture = ExtResource("1_t8o56")
 script = ExtResource("2_ajl28")
+
+[node name="Interactable" parent="." instance=ExtResource("3_dpp2y")]
+Dialog_Balloon = ExtResource("4_xjidl")
+dialogue_resource = ExtResource("5_84dnq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+position = Vector2(0.904663, -1.80951)
+shape = SubResource("RectangleShape2D_0526a")

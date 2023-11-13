@@ -1,8 +1,6 @@
 [gd_scene load_steps=63 format=3 uid="uid://cx54vgawhxneq"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_sg6li"]
-[ext_resource type="PackedScene" uid="uid://73jm5qjy52vq" path="res://ui/dialogue_balloon/balloon.tscn" id="2_kc7nn"]
-[ext_resource type="Resource" uid="uid://um5bq5tl26a8" path="res://ui/dialogue/hello_world.dialogue" id="3_b5n8u"]
 [ext_resource type="Script" path="res://player/player_skin.gd" id="4_0hgnj"]
 [ext_resource type="Texture2D" uid="uid://dopi7jurkv5h3" path="res://art/player/indigo_0.png" id="5_nm2cn"]
 
@@ -330,6 +328,30 @@ tracks/1/keys = {
 "update": 1,
 "values": [2, 1, 0, 1, 2, 3, 4]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Direction:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Direction:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 3)]
+}
 
 [sub_resource type="Animation" id="Animation_hn08r"]
 resource_name = "IdleLeft"
@@ -358,6 +380,30 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [2, 1, 0, 1, 2, 3, 4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Direction:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5708]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Direction:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 3)]
 }
 
 [sub_resource type="Animation" id="Animation_ribna"]
@@ -388,6 +434,30 @@ tracks/1/keys = {
 "update": 1,
 "values": [2, 1, 0, 1, 2, 3, 4]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Direction:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.5708]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Direction:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 3)]
+}
 
 [sub_resource type="Animation" id="Animation_d315y"]
 resource_name = "IdleUp"
@@ -416,6 +486,30 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [2, 1, 0, 1, 2, 3, 4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Direction:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.14159]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Direction:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -3)]
 }
 
 [sub_resource type="Animation" id="Animation_lxnlb"]
@@ -446,6 +540,30 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1, 2, 3]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Direction:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Direction:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 3)]
+}
 
 [sub_resource type="Animation" id="Animation_mk0n6"]
 resource_name = "MoveLeft"
@@ -474,6 +592,30 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Direction:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 3)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Direction:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5708]
 }
 
 [sub_resource type="Animation" id="Animation_shio3"]
@@ -504,6 +646,30 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1, 2, 3]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Direction:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.5708]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Direction:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 3)]
+}
 
 [sub_resource type="Animation" id="Animation_hj8cc"]
 resource_name = "MoveUp"
@@ -533,6 +699,57 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1, 2, 3]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Direction:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.14159]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Direction:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -3)]
+}
+
+[sub_resource type="Animation" id="Animation_woqaw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Direction:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Direction:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -3)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_73st3"]
 _data = {
@@ -543,7 +760,8 @@ _data = {
 "MoveDown": SubResource("Animation_lxnlb"),
 "MoveLeft": SubResource("Animation_mk0n6"),
 "MoveRight": SubResource("Animation_shio3"),
-"MoveUp": SubResource("Animation_hj8cc")
+"MoveUp": SubResource("Animation_hj8cc"),
+"RESET": SubResource("Animation_woqaw")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4ua5r"]
@@ -598,11 +816,11 @@ states/Idle/position = Vector2(394, 100)
 states/Move/node = SubResource("AnimationNodeBlendSpace2D_lavqq")
 states/Move/position = Vector2(610, 100)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_2exh1"]
+
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 6
 script = ExtResource("1_sg6li")
-Dialog_Balloon = ExtResource("2_kc7nn")
-dialogue_resource = ExtResource("3_b5n8u")
 
 [node name="YCollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(4, 4, 5, -1, 5, -4, 5, -8, 1, -10, -3, -9, -6, -8, -6, -4, -6, -1, -5, 4, -4, 9, 3, 9, 4, 6)
@@ -616,6 +834,7 @@ script = ExtResource("4_0hgnj")
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="PlayerSkin"]
 sprite_frames = SubResource("SpriteFrames_ma1g0")
 animation = &"IdleDown"
+frame = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerSkin"]
 root_node = NodePath("../..")
@@ -627,7 +846,19 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="PlayerSkin"]
 tree_root = SubResource("AnimationNodeStateMachine_aru58")
 anim_player = NodePath("../AnimationPlayer")
-active = true
 process_callback = 0
 parameters/Idle/blend_position = Vector2(0.00057435, 0.0986965)
 parameters/Move/blend_position = Vector2(0, 0)
+
+[node name="Direction" type="Marker2D" parent="."]
+position = Vector2(0, -3)
+
+[node name="InteractionSensor" type="Area2D" parent="Direction"]
+collision_layer = 0
+collision_mask = 16
+
+[node name="InteractionShape" type="CollisionShape2D" parent="Direction/InteractionSensor"]
+position = Vector2(0, 9)
+shape = SubResource("CircleShape2D_2exh1")
+
+[connection signal="body_entered" from="Direction/InteractionSensor" to="." method="_on_interaction_sensor_body_entered"]

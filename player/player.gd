@@ -1,10 +1,6 @@
 extends CharacterBody2D
 class_name Player
 
-@export var Dialog_Balloon: PackedScene = load("res://ui/dialogue_balloon/balloon.tscn")
-@export var title: String = "start"
-@export var dialogue_resource: DialogueResource
-
 enum States { MOVE }
 
 @export var speed := 100.0
@@ -16,22 +12,18 @@ var direction := Vector2.DOWN
 var input_direction := Vector2.ZERO
 
 @onready var skin: PlayerSkin = $PlayerSkin
-
+@onready var interaction_sensor: Area2D = $Direction/InteractionSensor
 
 func _ready() -> void:
 	skin.play_animation("Idle")
-	
 
 func _unhandled_input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_accept") and not Globals.playerVariables.met_ai:
-		assert(dialogue_resource != null, "\"dialogue_resource\" property needs to point to a DialogueResource.")
-		
-		input_direction = Vector2.ZERO
-		
-		var balloon: Node = Dialog_Balloon.instantiate()
-		add_child(balloon)
-		balloon.start(dialogue_resource, title)
-		return
+	if Input.is_action_just_pressed("ui_accept"): #and not Globals.playerVariables.met_ai:
+		var interactables = interaction_sensor.get_overlapping_areas()
+		if interactables.size() > 0:
+			interactables[0].interact()
+			return
+
 	input_direction = Vector2(
 		Input.get_axis("move_left", "move_right"),
 		Input.get_axis("move_up", "move_down")
