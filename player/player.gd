@@ -18,7 +18,7 @@ func _ready() -> void:
 	skin.play_animation("Idle")
 
 func _unhandled_input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_accept"): #and not Globals.playerVariables.met_ai:
+	if Input.is_action_just_pressed("ui_accept"):
 		var interactables = interaction_sensor.get_overlapping_areas()
 		if interactables.size() > 0:
 			interactables[0].interact()
@@ -44,3 +44,4 @@ func _physics_process(delta: float) -> void:
 		skin.set_blend_position(input_direction, input_direction.length())
 	
 	move_and_slide()
+
